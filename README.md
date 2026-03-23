@@ -17,12 +17,19 @@ project/
 │
 
 ├── app.py
+
 ├── data.json
+
 ├── index.html
+
 ├── message.html
+
 ├── read.html
+
 ├── error.html
+
 ├── style.css
+
 └── logo.png
 
 ## ▶️ Запуск
