@@ -15,6 +15,7 @@
 ## 🗂 Структура проєкту
 project/
 │
+
 ├── app.py
 
 ├── data.json
