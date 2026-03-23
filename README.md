@@ -13,7 +13,16 @@
 - Підключення статичних файлів (CSS, зображення)
 
 ## 🗂 Структура проєкту
-project/ │ ├── app.py ├── storage/ │   └── data.json ├── templates/ │   ├── index.html │   ├── message.html │   ├── read.html │   └── error.html └── static/ ├── style.css └── logo.png
+project/
+│
+├── app.py
+├── data.json
+├── index.html
+├── message.html
+├── read.html
+├── error.html
+├── style.css
+└── logo.png
 
 ## ▶️ Запуск
 
