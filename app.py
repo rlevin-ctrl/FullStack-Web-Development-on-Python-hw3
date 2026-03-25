@@ -18,13 +18,10 @@ def message():
     if request.method == "GET":
         return render_template("message.html")
 
-    raw_data = request.get_data().decode()
-    parts = raw_data.split("&")
-    data = {}
-
-    for p in parts:
-        key, value = p.split("=")
-        data[key] = value.replace("+", " ")
+    data = {
+        "username": request.form.get("username"),
+        "message": request.form.get("message")
+    }
 
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE, "r", encoding="utf-8") as f:
@@ -35,9 +32,8 @@ def message():
     timestamp = str(datetime.now())
     all_messages[timestamp] = data
 
-    # Записуємо назад
     with open(DATA_FILE, "w", encoding="utf-8") as f:
-        json.dump(all_messages, f, indent=2)
+        json.dump(all_messages, f, indent=2, ensure_ascii=False)
 
     return "Message saved!"
 
